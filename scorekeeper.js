@@ -10,6 +10,7 @@ user.addEventListener("input",function(){
 })
 
 p1.addEventListener("click",function(){
+    user.disabled = true;
     var curr = Number(document.getElementById("p1s").textContent) ;
     var curr2 = Number(document.getElementById("p2s").textContent) ;
     if(curr<Number(ts.textContent)&&curr2<Number(ts.textContent))
@@ -21,6 +22,7 @@ p1.addEventListener("click",function(){
 })
 
 p2.addEventListener("click",function(){
+    user.disabled = true;
     var curr = Number(document.getElementById("p2s").textContent) ;
     var curr2 = Number(document.getElementById("p1s").textContent) ;
     if(curr<Number(ts.textContent)&&curr2<Number(ts.textContent))
@@ -32,6 +34,7 @@ p2.addEventListener("click",function(){
 })
 
 reset.addEventListener("click",function(){
+    user.disabled = false;
     document.getElementById("p1s").textContent = 0;
     document.getElementById("p2s").textContent = 0;
     document.getElementById("p2s").classList.remove("green");
